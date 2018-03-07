@@ -2,6 +2,8 @@
 
 人脸识别API：  QQ493572374
 
+1: 人脸比对接口
+
 参数：image1  图片1 base64 
 	  image2  图片2 base64
 
@@ -17,9 +19,22 @@ url:  http://120.79.141.218:9998/facecompare
 		similarity  相似度
 		
 返回结果：{"threshold": "0.53", "validate_result": "1", "reason": "success", "error_code": "0", "similarity": 100}
-  
+
+1：人脸提取特征接口
+参数 ：image 图片 base64
+
+请求格式post json {"image":"base64"}
+
+url:  http://120.79.141.218:9998/getfeature
+
+返回格式：
+		image 特征值
+
+		
 
 例子：请求示例
-见 post.py
-直接运行 python post.py 即可
+见  人脸比对 post_cmp.py
+	提取特征 post_getfeature.py
+
+直接运行 python post_cmp.py 即可
 
